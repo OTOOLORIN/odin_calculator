@@ -47,6 +47,7 @@ input {
 
 .operation {
   margin-bottom: 200px;
+  outline: none;
   }
   .result {
     margin-bottom: 50px;
