@@ -44,3 +44,10 @@ input {
   font-size: 100px;
   color: #808080;
 }
+
+.operation {
+  margin-bottom: 200px;
+  }
+  .result {
+    margin-bottom: 50px;
+  }
