@@ -63,3 +63,13 @@ input {
   gap: 20px 50px;
   padding: 0 30px;
 }
+
+button {
+  background-color: #80808050;
+  color: white;
+  border: none;
+  font-size: 150px;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
