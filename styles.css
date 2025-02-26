@@ -23,3 +23,19 @@ main {
   background-color: #000300;
   margin: auto;
 }
+
+.display {
+  padding: 0 90px;
+}
+
+input {
+  font-family: monospace;
+  display: block;
+  border: none;
+  width: 100%;
+  font-size: 150px;
+  height: 150px;
+  color: #E2E2E2;
+  text-align: right;
+  background-color: inherit;
+}
