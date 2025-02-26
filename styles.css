@@ -82,3 +82,7 @@ button {
 .operation-color {
   color: #4edf0b;
 }
+
+.bold {
+  font-weight: bold;
+}
