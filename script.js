@@ -11,5 +11,10 @@ const numerals = {
     seven: 7, eight: 8,
     nine: 9, zero: 0,
     dot: '.', // decimal point
-    sign: '-' // negation sign
+    negation: '-' // negation sign
 }
+
+// operands to store user inputs
+let firstOperand = '';
+let secondOperands = ''
+let operationResult; // result of the operation
