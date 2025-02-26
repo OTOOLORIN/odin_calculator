@@ -56,4 +56,10 @@ input {
     border: 1px solid #F0E6EF60;
     margin-bottom: 70px;
  }
- 
+
+ .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+  padding: 0 30px;
+}
