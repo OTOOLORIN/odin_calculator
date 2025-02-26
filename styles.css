@@ -73,3 +73,8 @@ button {
   width: 300px;
   height: 300px;
 }
+
+.clear,
+.delete {
+  color: #D52941;
+}
