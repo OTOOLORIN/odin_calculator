@@ -39,3 +39,8 @@ input {
   text-align: right;
   background-color: inherit;
 }
+
+.result {
+  font-size: 100px;
+  color: #808080;
+}
