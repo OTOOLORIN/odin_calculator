@@ -51,3 +51,9 @@ input {
   .result {
     margin-bottom: 50px;
   }
+
+  hr {
+    border: 1px solid #F0E6EF60;
+    margin-bottom: 70px;
+ }
+ 
