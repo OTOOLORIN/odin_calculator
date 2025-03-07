@@ -29,3 +29,5 @@ let nextOperator = '';
 let operationResult = '';
 let equateSign;
 
+// initialize screen to 0
+firstOperandDisplay.textContent = firstOperand;
