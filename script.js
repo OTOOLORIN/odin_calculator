@@ -14,3 +14,18 @@ const allBtns = document.querySelector('.buttons');
 const clearBtn = document.querySelector('.clear');
 const equalBtn = document.querySelector('#equal');
 const deleteBtn = document.querySelector('#delete');
+
+const numbers = [
+  'one', 'two', 'three',
+  'four', 'five', 'six',
+  'seven', 'eight', 'nine',
+  'zero'
+]
+
+let firstOperand = '0';
+let secondOperand = '';
+let currentOperator = '';
+let nextOperator = '';
+let operationResult = '';
+let equateSign;
+
