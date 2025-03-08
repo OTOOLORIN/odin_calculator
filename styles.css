@@ -17,7 +17,7 @@ main {
 
 .calc-container {
   min-width: 1440px;
-  max-width: 1450px;
+  max-width: 1500px;
   border-radius: 5%;
   padding: 150px 5px 120px;
   background-color: #000300;
@@ -28,12 +28,49 @@ main {
   padding: 0 90px;
 }
 
+.display button {
+  font-size: 140px;
+  margin-bottom: 200px;
+  text-align: right;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  font-family: monospace;
+  justify-content: flex-end;
+  color: #E2E2E2;
+  margin-top: 50px;
+  background-color: inherit;
+  width: 100%;
+  min-height: 180px;
+  /* border: 3px solid red; */
+  align-items: center;
+}
+
+.display button div {
+  display: flex;
+  min-height: 180px;
+  align-items: center;
+}
+
+.first-operand {
+  margin-left: auto;
+  /* border: 1px solid red; */
+}
+
+.small-font {
+  font-size: 115px;
+}
+
+.small-font {
+  font-size: 100px;
+}
+
 input {
   font-family: monospace;
   display: block;
   border: none;
   width: 100%;
-  font-size: 150px;
   height: 150px;
   color: #E2E2E2;
   text-align: right;
@@ -45,10 +82,6 @@ input {
   color: #808080;
 }
 
-.operation {
-  margin-bottom: 200px;
-  outline: none;
-  }
   .result {
     margin-bottom: 50px;
   }
@@ -65,7 +98,7 @@ input {
   padding: 0 30px;
 }
 
-button {
+.buttons button {
   background-color: #80808050;
   color: white;
   border: none;
@@ -75,19 +108,36 @@ button {
   height: 300px;
 }
 
-.clear,
-.delete {
+.buttons button:active {
+  transform: scale(0.9);
+  background: #808080a6;
+  transition: transform 0s ease, background 0s ease;
+}
+
+:is(#equal:active) {
+  transform: scale(0.9);
+  color: whitesmoke;
+  background: #32fa00a4;
+  transition: transform 0s ease, background 0s ease;
+}
+
+button.clear,
+button.delete {
   color: #D52941;
 }
 
-.operation-color {
+button.operation-color {
   color: #4edf0b;
 }
 
-.bold {
+.operator,
+.percent-operator {
+  color: #4edf0b99;
+}
+button.bold {
   font-weight: bold;
 }
 
-.equal {
+button.equal {
   background-color: #4edf0b85;
 }
