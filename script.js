@@ -282,3 +282,28 @@ function equateHandler() {
     }
   }
 }
+
+// undo a last action with the delete button
+function deleteHandler() {
+  if (secondOperand) {
+    secondOperand = secondOperand.substring(0, secondOperand.length-1);
+    secondOperandDisplay.textContent = secondOperand;
+    return;
+  }
+  if (currentOperator) {
+    currentOperator = '';
+    operatorBox.textContent = currentOperator;
+    return;
+  }
+
+  if ((firstOperand)) {
+    // reset display to zero when there's only one digit
+    if (firstOperand.length == 1) {
+      firstOperand = '0';
+      firstOperandDisplay.textContent = firstOperand;
+      return;
+    }
+    firstOperand = firstOperand.substring(0, firstOperand.length-1);
+    firstOperandDisplay.textContent = firstOperand;
+  }
+}
