@@ -86,21 +86,6 @@ function calculateInPlace(operation, e) {
   operatorBox.textContent = e.target.textContent;
 }
 
-/*solve an expression with 'equation button' based on current 
- and save result as first operand for reusage: alse update display */
-function equate(operation) {
-  operationResult = operation(firstOperand, secondOperand);
-  let resultFormatted = Number(operationResult).toLocaleString();
-  firstOperand = operationResult.toString();
-  secondOperand = '';
-  currentOperator = '';
- firstOperandDisplay.textContent = firstOperand;
-  secondOperandDisplay.textContent = secondOperand;
-  resultDisplay.value = resultFormatted;
-  operatorBox.textContent = currentOperator;
-}
-
-
 // perform the calculationnnn in place, using the appropriate current operator
 function inPlace(e) {
   switch (currentOperator) {
@@ -122,4 +107,18 @@ function inPlace(e) {
       calculateInPlace(divide, e);
       break;
   }
+}
+
+/*solve an expression with 'equation button' based on current 
+ and save result as first operand for reusage: alse update display */
+function equate(operation) {
+  operationResult = operation(firstOperand, secondOperand);
+  let resultFormatted = Number(operationResult).toLocaleString();
+  firstOperand = operationResult.toString();
+  secondOperand = '';
+  currentOperator = '';
+ firstOperandDisplay.textContent = firstOperand;
+  secondOperandDisplay.textContent = secondOperand;
+  resultDisplay.value = resultFormatted;
+  operatorBox.textContent = currentOperator;
 }
