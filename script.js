@@ -182,3 +182,20 @@ secondDisplay.classList.add('small-font');
 }
 
 }
+
+/* handle operation as each major arithmetic
+operation button is pressed */
+function operationsHandler(e, operator) {
+  // DO NOT make any operations is operands are invalid
+  if (!isNumsValid(firstOperand, secondOperand)) return;
+
+  // when we have an operator already, calculate in place
+  if (firstOperand && secondOperand) {
+    nextOperator = operator;
+    inPlace(e);
+    return;
+  }
+  // add operator to the expression
+  currentOperator = operator;
+  operatorBox.textContent = e.target.textContent; 
+}
