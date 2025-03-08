@@ -260,3 +260,25 @@ function percentHandler() {
     secondOperandDisplay.textContent = secondOperand;
   }
 }
+
+// solve an expression as regards to the current operator
+function equateHandler() {
+  // this button only activates then we have a complate expression
+  if(firstOperand && secondOperand) {
+    equateSign = '=';
+    switch (currentOperator) {
+      case '+':
+        equate(add);
+        break;
+      case '-':
+        equate(subtract);
+        break;
+      case 'x':
+        equate(multiply);
+        break;
+      case '/':
+        equate(divide);
+        break;
+    }
+  }
+}
