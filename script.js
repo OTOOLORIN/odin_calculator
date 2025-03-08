@@ -307,3 +307,44 @@ function deleteHandler() {
     firstOperandDisplay.textContent = firstOperand;
   }
 }
+
+// handle all digits input
+function digitsHandler(btn, btnText) {
+  // first operand comes efore an operator
+  if (!currentOperator) {
+    if(numberLimit(firstOperand)) return; // do not accept numbers that are too large/small
+    /* erase old result as a digit is pressed and replace with the digit inputed,
+     indicates the user does not want to reuse the value */
+    if (equateSign) {
+      firstOperand = btnText;
+      equateSign = '';
+      firstOperandDisplay.textContent = firstOperand;
+      resultDisplay.value = '';
+      return;
+    }
+    if ((btnText == '0' && firstOperand == '0')) return;
+    if (firstOperand == '-0' && btn == 'zero') return;
+
+    if (firstOperand == '0' && btnText !== '0') {
+      firstOperand = btnText;
+    } else if (firstOperand == '-0' && btn !== 'zero') firstOperand = '-' + btnText;
+     else firstOperand += btnText;
+  }
+
+  // second operand becomes existence when there's an operator
+  if (currentOperator) {
+    if(numberLimit(secondOperand)) return;
+    if ((btnText == '0' && secondOperand == '0')) return;
+
+    if (secondOperand == '-0' && btn == 'zero') return;
+    if (secondOperand == '-0' && btn !== 'zero') {secondOperand = '-' +btnText;}
+    else if (btnText !== '0' && secondOperand == '0') {
+      secondOperand = btnText;
+      secondOperandDisplay.textContent = secondOperand;
+      return secondOperand;
+    }
+    else secondOperand += btnText;
+  }
+  secondOperandDisplay.textContent = secondOperand;
+  firstOperandDisplay.textContent = firstOperand;
+}
