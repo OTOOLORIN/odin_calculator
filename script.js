@@ -122,3 +122,16 @@ function equate(operation) {
   resultDisplay.value = resultFormatted;
   operatorBox.textContent = currentOperator;
 }
+
+// reset the entiree screen, defaulting back to only Zero on display
+function reset() {
+  operationResult = '';
+  firstOperand = '0';
+  secondOperand = '';
+  currentOperator = '';
+  nextOperator = '';
+  firstOperandDisplay.textContent = firstOperand;
+  secondOperandDisplay.textContent = secondOperand;
+  operatorBox.textContent = '';
+  resultDisplay.value = '';
+}
