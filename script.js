@@ -365,9 +365,9 @@ divBtn.addEventListener('click', (e) => {
 })
 
 // listen for other operations
-decimalBtn.addEventListener('click', decimalHandler)
-signBtn.addEventListener('click', negationHandler)
-percentBtn.addEventListener('click', percentHandler)
-equalBtn.addEventListener ('click', equateHandler)
-deleteBtn.addEventListener('click', deleteHandler)
-clearBtn.addEventListener('click', () => reset())
+decimalBtn.addEventListener('click', decimalHandler);
+signBtn.addEventListener('click', negationHandler);
+percentBtn.addEventListener('click', percentHandler);
+equalBtn.addEventListener ('click', equateHandler);
+deleteBtn.addEventListener('click', deleteHandler);
+clearBtn.addEventListener('click', () => reset());
