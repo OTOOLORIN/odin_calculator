@@ -10,9 +10,11 @@
   <main>
     <div class="calc-container">
       <div class="display">
-        <input class="operation" value="2+2" autofocus onkeydown="return false">
-        <input class="result" disabled value="4">
-      </div>
+        <button class="operation">
+          <span class="first-operand"></span><div><span class="operator"></span><span class="second-operand"></span></div>
+          </button>
+        <input class="result" disabled>
+      </div>>
       <hr>
       <div class="buttons">
         <button id="clear" class="clear bold">C</button>
