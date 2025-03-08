@@ -29,5 +29,46 @@ let nextOperator = '';
 let operationResult = '';
 let equateSign;
 
-// initialize screen to 0
+// initialize screen to display 0
 firstOperandDisplay.textContent = firstOperand;
+
+/*
+  Do not allow chaining operations, as a second operation
+  is inputed by the user, perform a calculation in place based on
+  the current operator.
+*/
+function calculateInPlace(operation, e) {
+  operationResult = operation(firstOperand, secondOperand);
+  let resultFormatted = Number(operationResult).toLocaleString();
+  firstOperand = operationResult.toString();
+  secondOperand = '';
+  currentOperator = nextOperator;
+  firstOperandDisplay.textContent = firstOperand;
+  secondOperandDisplay.textContent = secondOperand;
+  resultDisplay.value = resultFormatted;
+  operatorBox.textContent = e.target.textContent;
+}
+
+
+// perform the calculationnnn in place, using the appropriate current operator
+function inPlace(e) {
+  switch (currentOperator) {
+    case '+':
+      calculateInPlace(add, e);
+      break;
+    case '-':
+      calculateInPlace(subtract, e);
+      break;
+    case 'x':
+      calculateInPlace(multiply, e);
+      break;
+    case '/':
+      if (secondOperand === '0') {
+        reset();
+        alert(`You cannot divide a number by zero!`);
+        return; 
+      }
+      calculateInPlace(divide, e);
+      break;
+  }
+}
