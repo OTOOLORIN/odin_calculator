@@ -244,3 +244,19 @@ function negationHandler() {
   }
   secondOperandDisplay.textContent = secondOperand;
 }
+
+/* the percentage operation 
+  is done on the operand immediately
+  the button is clicked.
+*/
+function percentHandler() {
+  if ((firstOperand) && (!secondOperand)) {
+    firstOperand = percent(firstOperand).toString();
+    firstOperandDisplay.textContent = firstOperand;
+  }
+
+  if (secondOperand) {
+    secondOperand = percent(secondOperand).toString();
+    secondOperandDisplay.textContent = secondOperand;
+  }
+}
