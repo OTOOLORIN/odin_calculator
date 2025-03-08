@@ -348,3 +348,18 @@ function digitsHandler(btn, btnText) {
   secondOperandDisplay.textContent = secondOperand;
   firstOperandDisplay.textContent = firstOperand;
 }
+
+// listen for major operations click
+addBtn.addEventListener('click', (e) => {
+  operationsHandler(e, '+');
+}
+)
+subBtn.addEventListener('click', (e) => {
+  operationsHandler(e, '-');
+})
+mulBtn.addEventListener('click', (e) => {
+  operationsHandler(e, 'x');
+})
+divBtn.addEventListener('click', (e) => {
+  operationsHandler(e, '/');
+})
