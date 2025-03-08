@@ -163,3 +163,22 @@ function numberLimit(num) {
     }
   } 
 }
+
+/* reduce font of the display when operands get
+large to a certain level, increase the font again
+as numbers get small to a certain level*/
+function reduceFont(firstNumber, secondNumber=secondOperand, 
+  operandDisplay=firstOperandDisplay,
+  secondDisplay=secondOperandDisplay) {
+let displayClasses = Array.from(operandDisplay.classList);
+if ((firstNumber.length < 12 ) && (secondNumber.length < 12) && (displayClasses.includes('small-font'))) {
+operandDisplay.classList.remove('small-font');
+secondDisplay.classList.remove('small-font');
+return;
+}
+if ((firstNumber.length >= 12) && (!displayClasses.includes('small-font'))) {
+operandDisplay.classList.add('small-font');
+secondDisplay.classList.add('small-font');
+}
+
+}
