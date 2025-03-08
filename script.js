@@ -32,6 +32,43 @@ let equateSign;
 // initialize screen to display 0
 firstOperandDisplay.textContent = firstOperand;
 
+// all operation functions
+function add(a, b) {
+  a = Number(a);
+  b = Number(b);
+
+  result = (a+b).toFixed(2);
+  return Number(result);;
+}
+
+function subtract(a, b) {
+  a = Number(a);
+  b = Number(b);
+
+  result = (a-b).toFixed(2);
+  return Number(result);
+}
+
+function multiply(a, b) {
+  a = Number(a);
+  b = Number(b);
+
+  result = (a*b).toFixed(2);
+  return Number(result);
+}
+
+function divide(a, b) {
+  a = Number(a);
+  b = Number(b);
+  result = (a/b).toFixed(2);
+  return Number(result);
+}
+
+// only the percentage of just one number
+function percent(num) {
+  num = Number(num);
+  return num / 100;
+}
 /*
   Do not allow chaining operations, as a second operation
   is inputed by the user, perform a calculation in place based on
