@@ -371,3 +371,14 @@ percentBtn.addEventListener('click', percentHandler);
 equalBtn.addEventListener ('click', equateHandler);
 deleteBtn.addEventListener('click', deleteHandler);
 clearBtn.addEventListener('click', () => reset());
+
+// all digits listener
+allBtns.addEventListener('click', (e) => {
+  reduceFont(firstOperand);
+  reduceFont(secondOperand,firstOperand, secondOperandDisplay, firstOperandDisplay);
+  const btn = e.target.id;
+  const btnText = e.target.textContent;
+  if (numbers.includes(btn)) {
+    digitsHandler(btn, btnText);
+  }
+})
