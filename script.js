@@ -199,3 +199,26 @@ function operationsHandler(e, operator) {
   currentOperator = operator;
   operatorBox.textContent = e.target.textContent; 
 }
+
+
+/* handle decimal input: only allow one decimal input
+  only add decimal point when there's room
+*/
+function decimalHandler() {
+  if (!currentOperator) {
+    if (firstOperand.includes('.')) return;
+    if (firstOperand.length == 16 && (!firstOperand.includes('.'))) return;
+    if (firstOperand.length !== 15) firstOperand += '.';
+    firstOperandDisplay.textContent = firstOperand;
+    return;
+  }
+
+  if (!secondOperand) {
+    secondOperand = '0.'
+    secondOperandDisplay.textContent = secondOperand;
+    return;
+  };
+  if (secondOperand.includes('.')) return;
+  secondOperand += '.';
+  secondOperandDisplay.textContent = secondOperand;
+}
