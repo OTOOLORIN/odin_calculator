@@ -147,3 +147,19 @@ function isNumsValid(first, second) {
 
  return true;
 }
+
+/* If on operand reaches 15 digits, stop receiving input
+  if the operand is floating point and decimal numbers are
+  10 in total, stop receiving input
+*/
+function numberLimit(num) {
+  if (num.length >= 15 && ((!num.includes('.')) && (!num.includes('-')))) return true;
+  if (num.length >= 17 && num.includes('-') && num.includes('.')) return true;
+  if (num.length >= 16 && (num.includes('.') || num.includes('-'))) return true
+  if (num.includes('.')) {
+    const decimals = num.slice(num.indexOf('.')+1);
+    if (decimals.length == 10) {
+      return true;
+    }
+  } 
+}
