@@ -222,3 +222,25 @@ function decimalHandler() {
   secondOperand += '.';
   secondOperandDisplay.textContent = secondOperand;
 }
+
+/* Change the sign of a number:
+   negate it when it is positive,
+   denegate if when it is negative
+*/
+function negationHandler() {
+  if (!currentOperator) {
+    if (firstOperand.includes('-')) {
+      firstOperand = firstOperand.slice(1);
+    } else {
+      firstOperand = '-' + firstOperand;
+    }
+    firstOperandDisplay.textContent = firstOperand;
+    return;
+  }
+  if (secondOperand.includes('-')) {
+    secondOperand = secondOperand.slice(1);
+  } else {
+    secondOperand = '-' + secondOperand;
+  }
+  secondOperandDisplay.textContent = secondOperand;
+}
