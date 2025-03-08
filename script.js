@@ -363,3 +363,10 @@ mulBtn.addEventListener('click', (e) => {
 divBtn.addEventListener('click', (e) => {
   operationsHandler(e, '/');
 })
+
+// listen for other operations
+decimalBtn.addEventListener('click', decimalHandler)
+signBtn.addEventListener('click', negationHandler)
+percentBtn.addEventListener('click', percentHandler)
+equalBtn.addEventListener ('click', equateHandler)
+deleteBtn.addEventListener('click', deleteHandler)
