@@ -123,7 +123,7 @@ function equate(operation) {
   operatorBox.textContent = currentOperator;
 }
 
-// reset the entiree screen, defaulting back to only Zero on display
+// reset the entire screen, defaulting back to only Zero on display
 function reset() {
   operationResult = '';
   firstOperand = '0';
@@ -134,4 +134,16 @@ function reset() {
   secondOperandDisplay.textContent = secondOperand;
   operatorBox.textContent = '';
   resultDisplay.value = '';
+}
+
+
+/* A criteria to decide if an operation in possible based
+on opernds provides */
+function isNumsValid(first, second) {
+  if (first === '-0.' || first === '0.' || 
+     second === '-0.'  || second === '0.' || 
+     first == ''
+  ) return false;
+
+ return true;
 }
