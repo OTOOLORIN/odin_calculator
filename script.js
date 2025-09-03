@@ -1,3 +1,5 @@
+// start
+
 // references to DOM elements
 const firstOperandDisplay = document.querySelector('.first-operand');
 const secondOperandDisplay = document.querySelector('.second-operand');
@@ -382,3 +384,5 @@ allBtns.addEventListener('click', (e) => {
     digitsHandler(btn, btnText);
   }
 })
+
+// end
